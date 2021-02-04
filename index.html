@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Dice</title>
+    <link rel="stylesheet" href="style/style-index.css">
+</head>
+<body>
+    <!-- <script src="./js/index.js"></script> -->
+    <div class="gameboard">
+        <div id="celeste" class="color celeste left" data-color="celeste"></div>
+        <div id="violeta" class="color violeta right" data-color="violeta"></div>
+        <div id="naranja" class="color naranja left" data-color="naranja"></div>
+        <div id="verde" class="color verde right" data-color="verde"></div>
+        <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+    </div>
+    <script>
+
+        const btnEmpezar = document.getElementById(`btnEmpezar`)
+        const btnCeleste = document.getElementById(`celeste`)
+        const btnVioleta = document.getElementById(`violeta`)
+        const btnNaranja = document.getElementById(`naranja`)
+        const btnVerde = document.getElementById(`verde`)
+
+
+
+        class Juego {
+
+            constructor(){
+                this.inicializar()
+                this.generarSecuencia()
+            }
+
+            inicializar(){
+                btnEmpezar.classList.add(`hide`)
+                this.level = 1
+                this.colors = {
+                    celeste,
+                    violeta,
+                    naranja,
+                    verde
+                }
+            }
+            generarSecuencia(){
+                this.secuencia = new Array(10).fill(0).map(n => Math.floor(Math.random(n) * 4))
+            }
+
+        }
+
+        function empezarJuego(){
+            window.juego = new Juego
+        }
+    </script>
+</body>
+</html>
