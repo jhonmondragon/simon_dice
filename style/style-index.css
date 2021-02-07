@@ -1,6 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 body{
     margin: 0;
-    background: #dedede;
+    background-image: url(https://www.xtrafondos.com/wallpapers/paisaje-retro-de-atardecer-5436.jpg);
+    background-attachment: fixed;
+    background-position: center;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -65,12 +73,24 @@ body{
 .btn-start {
     width: 400px;
     height: 100px;
-    background: #ecf0f1;
-    color: #2c3e50;
+    background: #470d39b2;
+    color: #dab9d1;
     font-size: 2.5rem;
     position: absolute;
     top: calc(50% - 50px);
     left: calc(50% - 200px);
+    border: none;
+}
+.btn-start:hover {
+    width: 400px;
+    height: 100px;
+    background: #470d39b2;
+    color: #ffffff;
+    font-size: 3rem;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 200px);
+    border: none;
 }
 
 .hide {
